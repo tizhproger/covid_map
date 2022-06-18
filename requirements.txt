@@ -9,5 +9,3 @@ toml==0.10.2
 whitenoise==5.3.0
 django-environ==0.8.1
 django-models-utils
-django_on_heroku
-django-cors-headers
