@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} {{ page_name }} {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <span id="map_token" style="display: none;">{{ mapbox_access_token }}</span>
+    <div id='map'></div>
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="{{ ASSETS_ROOT }}/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="{{ ASSETS_ROOT }}/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="{{ ASSETS_ROOT }}/js/main.js"></script>
+
+{% if staff %}
+    <script src="{{ ASSETS_ROOT }}/js/map_admin.js"></script>
+{% elif auth %}
+    <script src="{{ ASSETS_ROOT }}/js/map_user.js"></script>
+{% else %}
+    <script src="{{ ASSETS_ROOT }}/js/map_guest.js"></script>
+{% endif %}
+
+{% endblock javascripts %}
