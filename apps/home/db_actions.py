@@ -1,6 +1,5 @@
 from datetime import datetime
 from xmlrpc.client import boolean
-from sqlalchemy import null
 from .models import *
 
 
