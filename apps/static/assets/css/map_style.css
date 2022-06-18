@@ -1,0 +1,35 @@
+#map {
+    position: relative;
+    height: 85vh;
+    width: auto;
+    margin: 20px;
+}
+
+#geocoder {
+    z-index: 999;
+    margin: 20px;
+}
+
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+}
+
+.center-element {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dropdown-fix{
+    position: absolute !important;
+    height: 200px;
+    width: 230px;
+    overflow: auto;
+    margin: 0px 10px 0px 10px !important;
+}
+
+.textarea-fix{
+    resize: none;
+    height: 100px;
+}
