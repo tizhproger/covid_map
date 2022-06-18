@@ -1,6 +1,6 @@
 var map_points = '';
 var area = 5;
-const url = 'http://127.0.0.1:8000/';
+const url = 'https://covidprevent.herokuapp.com/';
 var markers = L.markerClusterGroup();
 	
 $.ajax({
