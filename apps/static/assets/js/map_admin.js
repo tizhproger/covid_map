@@ -1,7 +1,7 @@
 var curr_marker;
 var local_points = [];
 var manual_point = false;
-const url = 'http://127.0.0.1:8000/';
+const url = 'https://covidprevent.herokuapp.com/';
 const csrftoken = $('[name=csrfmiddlewaretoken]').val();
 
 function userPoint(lat, long, popup_inf, map_var, source='user', threat=1){
