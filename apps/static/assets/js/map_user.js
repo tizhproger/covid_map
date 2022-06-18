@@ -1,6 +1,6 @@
 var area = 5;
 var curr_marker;
-const url = 'http://127.0.0.1:8000/';
+const url = 'https://covidprevent.herokuapp.com/';
 const csrftoken = $('[name=csrfmiddlewaretoken]').val();
 var markers = L.markerClusterGroup();
 
