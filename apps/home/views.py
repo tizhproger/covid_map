@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import redirect
 from django.template import loader
+from django.views.decorators.csrf import csrf_exempt
 from .db_actions import check_ban, get_points, get_unchecked, update_point, save_point, drop_point, ban_user, check_key, check_spam
 
 mapbox_access_token = 'pk.eyJ1IjoidGl6aHByb2dlciIsImEiOiJjbDN2dXB3bmYxdjYyM2lsdHZwZjRhbmJwIn0.LrtqGvP5I0RhbKjyVpDbwA'
@@ -96,7 +97,8 @@ def savePoint(request):
         response.status_code = 403
         return response
 
-
+    
+@csrf_exempt
 def institutePoint(request, key):
     if request.method == 'POST' and check_key(key):
         data = json.loads(request.body)
