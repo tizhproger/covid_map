@@ -100,6 +100,7 @@ def savePoint(request):
     
 @csrf_exempt
 def institutePoint(request, key):
+    print(key)
     if request.method == 'POST' and check_key(key):
         data = json.loads(request.body)
         if save_point(lat=data['latitude'], lng=data['longtitude'], desc=data['description'], adrs=data['address'], threat=data['threat'], bkey=key):
