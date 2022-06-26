@@ -100,7 +100,7 @@ def savePoint(request):
 def institutePoint(request, key):
     if request.method == 'POST' and check_key(key):
         data = json.loads(request.body)
-        if save_point(lat=data['latitude'], lng=data['longtitude'], desc=data['description'], adrs=data['address'], threat=data['threat'], bkey=data['key']):
+        if save_point(lat=data['latitude'], lng=data['longtitude'], desc=data['description'], adrs=data['address'], threat=data['threat'], bkey=key):
            return HttpResponse(200)
         response = JsonResponse({'error': 'Something wrong on server side, oooops...'})
         response.status_code = 500
